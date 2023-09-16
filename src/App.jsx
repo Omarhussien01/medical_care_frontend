@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 
 import Login from "./pages/Login";
 import Registeration from "./pages/Registeration";
-import Profile from "./pages/Profile";
+
 import Overview from "./pages/Overview";
 import UserProfile from "./pages/UserProfile";
 
@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registeration />} />
-          <Route path="/profile" element={<Profile />} />
+          
           <Route path="/profile/:userId" element={<UserProfile />} />
           <Route path="/overview" element={<Overview />} />
           
