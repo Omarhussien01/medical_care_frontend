@@ -69,8 +69,10 @@ function Registeration() {
           }
         );
 
+        const data = await response.json();
+
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error(`HTTP error! Status: ${data}`);
         }
 
         toast.success("Registered successfully.");
