@@ -72,7 +72,7 @@ function Registeration() {
         const data = await response.json();
 
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${data}`);
+          throw new Error(`${data}`);
         }
 
         toast.success("Registered successfully.");
