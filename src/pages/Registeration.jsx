@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import baseUrl from './../config';
+import baseUrl from "./../config";
 
 function Registeration() {
   const [name, setName] = useState("");
@@ -42,7 +42,7 @@ function Registeration() {
       errormessage += isproceed ? "Valid Email" : ", Valid Email";
     }
 
-    if (phone !== "" && !/^[0-9]+$/.test(phone)) {
+    if (phone === null || phone === "" || !/^[0-9]+$/.test(phone)) {
       isproceed = false;
       errormessage += isproceed ? "Valid Phone Number" : ", Valid Phone Number";
     }
@@ -73,7 +73,6 @@ function Registeration() {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        
         toast.success("Registered successfully.");
         navigate("/login");
       } catch (error) {
