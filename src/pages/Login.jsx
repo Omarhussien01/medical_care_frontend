@@ -40,7 +40,7 @@ function Login() {
           navigate(`/profile/${data._id}`);
         }
       } catch (error) {
-        toast.error("Failed: " + error.message);
+        toast.error("Failed: " + 'Wrong Credentials');
       }
     }
   };
